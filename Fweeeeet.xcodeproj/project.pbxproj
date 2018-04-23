@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		68521FF3208E5E16006C7100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68521FF2208E5E16006C7100 /* AppDelegate.swift */; };
 		68521FF5208E5E16006C7100 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68521FF4208E5E16006C7100 /* ViewController.swift */; };
-		68521FF8208E5E16006C7100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68521FF6208E5E16006C7100 /* Main.storyboard */; };
 		68521FFA208E5E18006C7100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68521FF9208E5E18006C7100 /* Assets.xcassets */; };
 		68521FFD208E5E18006C7100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68521FFB208E5E18006C7100 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		68521FEF208E5E16006C7100 /* Fweeeeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fweeeeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68521FF2208E5E16006C7100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68521FF4208E5E16006C7100 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68521FF7208E5E16006C7100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68521FF9208E5E18006C7100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68521FFC208E5E18006C7100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68521FFE208E5E18006C7100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,14 +52,53 @@
 		68521FF1208E5E16006C7100 /* Fweeeeet */ = {
 			isa = PBXGroup;
 			children = (
-				68521FF2208E5E16006C7100 /* AppDelegate.swift */,
-				68521FF4208E5E16006C7100 /* ViewController.swift */,
-				68521FF6208E5E16006C7100 /* Main.storyboard */,
-				68521FF9208E5E18006C7100 /* Assets.xcassets */,
-				68521FFB208E5E18006C7100 /* LaunchScreen.storyboard */,
+				68522005208E62E1006C7100 /* Resources */,
+				68522004208E62D7006C7100 /* Classes */,
 				68521FFE208E5E18006C7100 /* Info.plist */,
 			);
 			path = Fweeeeet;
+			sourceTree = "<group>";
+		};
+		68522004208E62D7006C7100 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				68522007208E6303006C7100 /* Views */,
+				68522006208E62F6006C7100 /* Controllers */,
+				68522008208E6317006C7100 /* Extensions */,
+				68521FF2208E5E16006C7100 /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		68522005208E62E1006C7100 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68521FF9208E5E18006C7100 /* Assets.xcassets */,
+				68521FFB208E5E18006C7100 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		68522006208E62F6006C7100 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				68521FF4208E5E16006C7100 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		68522007208E6303006C7100 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		68522008208E6317006C7100 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +161,6 @@
 			files = (
 				68521FFD208E5E18006C7100 /* LaunchScreen.storyboard in Resources */,
 				68521FFA208E5E18006C7100 /* Assets.xcassets in Resources */,
-				68521FF8208E5E16006C7100 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,14 +179,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		68521FF6208E5E16006C7100 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				68521FF7208E5E16006C7100 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		68521FFB208E5E18006C7100 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -213,7 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -283,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = Fweeeeet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,7 +319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.Fweeeeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,6 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = Fweeeeet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.Fweeeeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
