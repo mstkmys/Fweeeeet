@@ -1,0 +1,6 @@
+framework module Pods_Fweeeeet {
+  umbrella header "Pods-Fweeeeet-umbrella.h"
+
+  export *
+  module * { export * }
+}

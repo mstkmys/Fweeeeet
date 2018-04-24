@@ -9,17 +9,44 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private var mainView: MainView {
+        let view = MainView(frame: UIScreen.main.bounds)
+        view.backgroundColor = .white
+        return view
+    }
+    
+    private var tableView: UITableView {
+        return mainView.tablelView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        [mainView].forEach{ self.view.addSubview($0) }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
