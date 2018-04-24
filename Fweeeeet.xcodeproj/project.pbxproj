@@ -17,6 +17,7 @@
 		68522011208FAFC9006C7100 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68522010208FAFC9006C7100 /* MainView.swift */; };
 		68522013208FB191006C7100 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68522012208FB191006C7100 /* GoogleService-Info.plist */; };
 		68FDCECE208FBA46007FD1EF /* Fweeeeet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FDCECD208FBA46007FD1EF /* Fweeeeet.swift */; };
+		68FDCED0208FCEE6007FD1EF /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FDCECF208FCEE6007FD1EF /* DateFormatter.swift */; };
 		90C81230D8D387C2164295CB /* Pods_Fweeeeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E05930A69FF7E8C0B4E296C /* Pods_Fweeeeet.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		68522010208FAFC9006C7100 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		68522012208FB191006C7100 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		68FDCECD208FBA46007FD1EF /* Fweeeeet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fweeeeet.swift; sourceTree = "<group>"; };
+		68FDCECF208FCEE6007FD1EF /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		6E7118946D1C2EED1C44B108 /* Pods-Fweeeeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fweeeeet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fweeeeet/Pods-Fweeeeet.debug.xcconfig"; sourceTree = "<group>"; };
 		AE47AB288658AA437167DF64 /* Pods-Fweeeeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fweeeeet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fweeeeet/Pods-Fweeeeet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				6852200E208FAF8D006C7100 /* UIView.swift */,
+				68FDCECF208FCEE6007FD1EF /* DateFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				6852200F208FAF8D006C7100 /* UIView.swift in Sources */,
 				68FDCECE208FBA46007FD1EF /* Fweeeeet.swift in Sources */,
 				68521FF5208E5E16006C7100 /* ViewController.swift in Sources */,
+				68FDCED0208FCEE6007FD1EF /* DateFormatter.swift in Sources */,
 				68521FF3208E5E16006C7100 /* AppDelegate.swift in Sources */,
 				68522011208FAFC9006C7100 /* MainView.swift in Sources */,
 				6852200D208FACC1006C7100 /* MyTableViewCell.swift in Sources */,
@@ -436,7 +440,10 @@
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = Fweeeeet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.Fweeeeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -453,7 +460,10 @@
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = Fweeeeet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.Fweeeeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

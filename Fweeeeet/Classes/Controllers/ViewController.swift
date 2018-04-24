@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         db = Firestore.firestore()
         loadData()
+        checkForUpdates()
         [mainView].forEach{ self.view.addSubview($0) }
         tableView.dataSource = self
         tableView.delegate = self
@@ -57,6 +58,17 @@ class ViewController: UIViewController {
             } else {
                 self.fweeeeetArray = querySnapshot!.documents.compactMap({ Fweeeeet(dictonary: $0.data()) })
             }
+        }
+    }
+    
+    private func checkForUpdates() {
+        db.collection("fweeeeets").whereField("timeStamp", isGreaterThan: Date()).addSnapshotListener { querySnapShot, error in
+            guard let snapShot = querySnapShot else { return }
+            snapShot.documentChanges.forEach({
+                if $0.type == .added {
+                    self.fweeeeetArray.append(Fweeeeet(dictonary: $0.document.data())!)
+                }
+            })
         }
     }
     
@@ -99,7 +111,7 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
         let fweeeeet = fweeeeetArray[indexPath.row]
         cell.nameLabel.text = fweeeeet.name
-        cell.dateLabel.text = String(describing: fweeeeet.timeStamp)
+        cell.dateLabel.text = DateFormatter.myFormatter.string(from: fweeeeet.timeStamp)
         cell.titleLabel.text = fweeeeet.content
         return cell
     }

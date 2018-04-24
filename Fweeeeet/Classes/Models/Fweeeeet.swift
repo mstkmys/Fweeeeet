@@ -19,7 +19,7 @@ struct Fweeeeet {
     var dictonary: [String: Any] {
         return [
             "name": name,
-            "conten": content,
+            "content": content,
             "timeStamp": timeStamp
         ]
     }
@@ -32,6 +32,7 @@ extension Fweeeeet: DocumentSerializeble {
             let content = dictonary["content"] as? String,
             let timeStamp = dictonary["timeStamp"] as? Date
         else {
+            print("sippai oppai -----------------------------------------------------------")
             return nil
         }
         self.init(name: name, content: content, timeStamp: timeStamp)
